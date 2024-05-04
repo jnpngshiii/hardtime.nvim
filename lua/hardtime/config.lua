@@ -45,8 +45,8 @@ M.config = {
    },
    restriction_mode = "block", -- block or hint
    restricted_keys = {
+      ["t"] = { "n", "x" },
       ["h"] = { "n", "x" },
-      ["j"] = { "n", "x" },
       ["k"] = { "n", "x" },
       ["l"] = { "n", "x" },
       ["-"] = { "n", "x" },
@@ -91,16 +91,6 @@ M.config = {
       "Trouble",
    },
    hints = {
-      ["[thkl][%^_]"] = {
-         message = function(key)
-            return "Use "
-               .. (key:sub(1, 1) == "k" and "-" or "<CR> or +")
-               .. " instead of "
-               .. key
-         end,
-         length = 2,
-      },
-
       -- hints for unnecessary visual mode
       ["Vgg[dcy=<>]"] = {
          message = function(keys)
