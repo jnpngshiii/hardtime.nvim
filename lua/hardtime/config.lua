@@ -91,7 +91,7 @@ M.config = {
       "Trouble",
    },
    hints = {
-      ["[kj][%^_]"] = {
+      ["[thkl][%^_]"] = {
          message = function(key)
             return "Use "
                .. (key:sub(1, 1) == "k" and "-" or "<CR> or +")
@@ -99,94 +99,6 @@ M.config = {
                .. key
          end,
          length = 2,
-      },
-      ["%$a"] = {
-         message = function()
-            return "Use A instead of $a"
-         end,
-         length = 2,
-      },
-      ["%^i"] = {
-         message = function()
-            return "Use I instead of ^i"
-         end,
-         length = 2,
-      },
-      ["%D[k-]o"] = {
-         message = function(keys)
-            return "Use O instead of " .. keys:sub(2)
-         end,
-         length = 3,
-      },
-      ["%D[j+]O"] = {
-         message = function(keys)
-            return "Use o instead of " .. keys:sub(2)
-         end,
-         length = 3,
-      },
-      ["[^fFtT]li"] = {
-         message = function()
-            return "Use a instead of li"
-         end,
-         length = 3,
-      },
-      ["2([dcy=<>])%1"] = {
-         message = function(key)
-            return "Use " .. key:sub(3) .. "j instead of " .. key
-         end,
-         length = 3,
-      },
-
-      -- hints for f/F/t/T
-      ["[^dcy=]f.h"] = {
-         message = function(keys)
-            return "Use t" .. keys:sub(3, 3) .. " instead of " .. keys:sub(2)
-         end,
-         length = 4,
-      },
-      ["[^dcy=]F.l"] = {
-         message = function(keys)
-            return "Use T" .. keys:sub(3, 3) .. " instead of " .. keys:sub(2)
-         end,
-         length = 4,
-      },
-      ["[^dcy=]T.h"] = {
-         message = function(keys)
-            return "Use F" .. keys:sub(3, 3) .. " instead of " .. keys:sub(2)
-         end,
-         length = 4,
-      },
-      ["[^dcy=]t.l"] = {
-         message = function(keys)
-            return "Use f" .. keys:sub(3, 3) .. " instead of " .. keys:sub(2)
-         end,
-         length = 4,
-      },
-
-      -- hints for delete + insert
-      ["d[bBwWeE%^%$]i"] = {
-         message = function(keys)
-            return "Use " .. "c" .. keys:sub(2, 2) .. " instead of " .. keys
-         end,
-         length = 3,
-      },
-      ["dg[eE]i"] = {
-         message = function(keys)
-            return "Use " .. "c" .. keys:sub(2, 3) .. " instead of " .. keys
-         end,
-         length = 4,
-      },
-      ["d[tTfF].i"] = {
-         message = function(keys)
-            return "Use " .. "c" .. keys:sub(2, 3) .. " instead of " .. keys
-         end,
-         length = 4,
-      },
-      ["d[ia][\"'`{}%[%]()<>bBwWspt]i"] = {
-         message = function(keys)
-            return "Use " .. "c" .. keys:sub(2, 3) .. " instead of " .. keys
-         end,
-         length = 4,
       },
 
       -- hints for unnecessary visual mode
